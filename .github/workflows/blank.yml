@@ -5,8 +5,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     outputs:
-      modified_files: "[1,2,3]" 
-      #${{ steps.matrix.outputs.modified_files }}
+      modified_files: ${{ steps.matrix.outputs.modified_files }}
       is_list_empty: ${{ steps.matrix.outputs.is_list_empty_conditional}}
     steps:
       - id: matrix
@@ -34,4 +33,5 @@ jobs:
           echo ${{matrix}}
 #           for file in ${{ needs.setup.outputs.modified_files }}; do
 #             echo ${file}
-#           done
+#           done  
+
