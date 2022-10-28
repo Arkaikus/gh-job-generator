@@ -16,7 +16,7 @@ jobs:
               modified_files+=(,${i})
           done
 
-          echo modified_files=${modified_files[@]}>> $GITHUB_OUTPUT
+          echo modified_files={"include":[${modified_files[@]}]} >> $GITHUB_OUTPUT
           echo is_list_empty=${is_list_empty} >> $GITHUB_OUTPUT
   build:
     runs-on: ubuntu-latest
