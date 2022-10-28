@@ -26,12 +26,8 @@ jobs:
       matrix:
         value: ${{ fromJson(needs.setup.outputs.modified_files) }}
     steps:
-      - id: print_list
+      - id: print_vars
         run: |
           echo ${{needs.setup.outputs.modified_files}}
           echo ${{needs.setup.outputs.is_list_empty}}
           echo ${{matrix}}
-#           for file in ${{ needs.setup.outputs.modified_files }}; do
-#             echo ${file}
-#           done  
-
