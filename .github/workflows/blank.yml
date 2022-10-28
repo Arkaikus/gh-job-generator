@@ -11,7 +11,7 @@ jobs:
       - id: matrix
         run: |
           modified_files=(1,2)
-          is_list_empty=true
+          is_list_empty=false
           for i in {3..10}; do
               modified_files+=(,${i})
           done
