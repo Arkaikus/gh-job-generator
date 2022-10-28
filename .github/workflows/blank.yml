@@ -1,9 +1,6 @@
 name: Docker Client Images CI
 on:
-  push:
-    branches: [ “main” ]
-  pull_request:
-    branches: [ “main” ]
+  workflow_dispatch:
 jobs:
   setup:
     runs-on: ubuntu-latest
